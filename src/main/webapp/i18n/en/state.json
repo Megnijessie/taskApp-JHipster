@@ -1,0 +1,10 @@
+{
+  "taskApp": {
+    "state": {
+      "null": "",
+      "DEBUT": "DEBUT",
+      "EN_COURS": "EN_COURS",
+      "TERMINER": "TERMINER"
+    }
+  }
+}

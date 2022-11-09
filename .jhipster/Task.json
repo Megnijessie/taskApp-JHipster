@@ -1,0 +1,45 @@
+{
+  "changelogDate": "20221109030015",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "dateStart",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateEnd",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "state",
+      "fieldValidateRules": ["required", "unique"],
+      "fieldValues": "DEBUT,EN_COURS,TERMINER"
+    }
+  ],
+  "name": "Task",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": true,
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "task",
+      "ownerSide": true,
+      "relationshipName": "creer",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
